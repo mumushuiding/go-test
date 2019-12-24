@@ -20,6 +20,8 @@ func TestAtomic(t *testing.T) {
 	wg.Wait()
 	fmt.Printf("complete:%d", number)
 }
+
+// addNumberWithAtomic 并发安全
 func addNumberWithAtomic(wg *sync.WaitGroup) {
 	time.Sleep(time.Duration(1) * time.Second)
 	atomic.AddUint32(&number, 1)
