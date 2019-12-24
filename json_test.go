@@ -9,7 +9,7 @@ import (
 )
 
 type something struct {
-	types string `json:types`
+	types string
 }
 type Host struct {
 	types string
